@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact Hightable | Events, Listings & Partnerships</title>
+
+  <meta
+    name="description"
+    content="Contact Hightable about event promotion, venue listings, media coverage, accommodation features and business partnerships."
+  >
+
+  <meta name="theme-color" content="#fff9ed">
+  <link rel="canonical" href="https://hightable.site/contact/">
+
+  <style>
+    :root {
+      --yellow: #ffd84d;
+      --orange: #ff7947;
+      --pink: #ff83b5;
+      --purple: #7654d6;
+      --blue: #75d9f5;
+      --mint: #a9efcb;
+      --cream: #fff9ed;
+      --ink: #25212c;
+      --muted: #716b79;
+      --white: #ffffff;
+      --border: #eee7dc;
+      --radius: 24px;
+      --shadow: 0 12px 35px rgba(37, 33, 44, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      font: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      background: var(--yellow);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 249, 237, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1.3px;
+      white-space: nowrap;
+    }
+
+    .logo-mark {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--orange);
+      font-size: 19px;
+      transform: rotate(-5deg);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    .nav-cta {
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 9px 12px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--yellow);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .breadcrumb {
+      padding-top: 23px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero {
+      padding: 38px 0 45px;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 7vw, 70px);
+      border-radius: 32px;
+      background: var(--pink);
+    }
+
+    .hero-panel::after {
+      content: "✉";
+      position: absolute;
+      right: 5%;
+      bottom: -65px;
+      font-size: clamp(150px, 25vw, 290px);
+      line-height: 1;
+      opacity: 0.25;
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      margin-bottom: 15px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 22px 0 0;
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 19px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .section {
+      padding: 25px 0 60px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    .contact-info h2,
+    .form-card h2 {
+      margin: 0;
+      font-size: clamp(27px, 4vw, 36px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .intro {
+      margin: 12px 0 25px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 14px;
+      padding: 19px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .option-icon {
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--yellow);
+      font-size: 22px;
+    }
+
+    .contact-option:nth-of-type(2) .option-icon {
+      background: var(--mint);
+    }
+
+    .contact-option:nth-of-type(3) .option-icon {
+      background: var(--blue);
+    }
+
+    .contact-option h3 {
+      margin: 0 0 4px;
+      font-size: 16px;
+    }
+
+    .contact-option p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-option a {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 18px;
+      background: #eee8ff;
+      color: #49377d;
+      font-size: 13px;
+    }
+
+    .form-card {
+      padding: clamp(23px, 5vw, 38px);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .form-card > p {
+      margin: 10px 0 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      margin-bottom: 17px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #ddd5e3;
+      border-radius: 13px;
+      background: #fffdf9;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .field textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #99919f;
+    }
+
+    .required-note {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 15px 20px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--purple);
+      color: var(--white);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #6040c2;
+    }
+
+    .form-disclaimer {
+      margin: 13px 0 0 !important;
+      font-size: 12px !important;
+    }
+
+    .form-status {
+      margin-top: 15px;
+      padding: 13px;
+      border-radius: 12px;
+      background: var(--mint);
+      font-size: 13px;
+    }
+
+    .form-status:empty {
+      display: none;
+    }
+
+    .enquiry-types {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 45px;
+    }
+
+    .enquiry-card {
+      padding: 23px;
+      border-radius: 20px;
+      background: var(--yellow);
+    }
+
+    .enquiry-card:nth-child(2) {
+      background: var(--blue);
+    }
+
+    .enquiry-card:nth-child(3) {
+      background: var(--mint);
+    }
+
+    .enquiry-card .icon {
+      font-size: 28px;
+    }
+
+    .enquiry-card h3 {
+      margin: 12px 0 6px;
+      font-size: 17px;
+    }
+
+    .enquiry-card p {
+      margin: 0;
+      font-size: 13px;
+      color: #514b58;
+    }
+
+    footer {
+      padding: 35px 0 25px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      padding-bottom: 28px;
+    }
+
+    .footer-brand {
+      max-width: 360px;
+    }
+
+    .footer-brand p {
+      color: #c7c0d0;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      gap: 15px 22px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      padding-top: 18px;
+      border-top: 1px solid #49434f;
+      color: #c7c0d0;
+      font-size: 12px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 11px;
+        font-size: 12px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .enquiry-types {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+        padding: 9px 12px;
+        border: 0;
+        border-radius: 12px;
+        background: var(--yellow);
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 18px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 8px;
+      }
+
+      .nav-cta {
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 25px;
+      }
+
+      .hero-panel {
+        border-radius: 24px;
+      }
+
+      .hero-panel::after {
+        right: -25px;
+        bottom: -25px;
+        font-size: 150px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .form-row,
+      .enquiry-types {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    KAMPALA FIRST. GOOD EXPERIENCES EVERYWHERE. ✨
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="../" aria-label="Hightable homepage">
+        <span class="logo-mark">H</span>
+        <span>hightable<span style="color:var(--orange)">.</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        Menu ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="../events/">Events</a>
+        <a href="../places/">Places</a>
+        <a href="../catch-ups/">Catch-ups</a>
+        <a href="../lifestyle/">Lifestyle</a>
+        <a href="../stay/">Places to Stay</a>
+        <a class="nav-cta" href="./">Contact Us ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container breadcrumb">
+      <a href="../">Home</a> / Contact
+    </div>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-panel">
+          <span class="eyebrow">Let's connect</span>
+
+          <h1>Good things<br>start with a hello. 👋</h1>
+
+          <p>
+            Have an event to promote, a venue to showcase, a story to share
+            or an idea for working together? Tell us what you're planning.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#contactForm">Send an enquiry ↓</a>
+            <a class="button button-light" href="../events/">
+              Explore Hightable
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h2>How can we help?</h2>
+
+            <p class="intro">
+              Choose the contact option that works for you. For partnerships
+              and promotional enquiries, include enough detail for us to
+              understand your proposal.
+            </p>
+
+            <article class="contact-option">
+              <div class="option-icon" aria-hidden="true">✉️</div>
+
+              <div>
+                <h3>Email</h3>
+                <p>
+                  For business enquiries, proposals and detailed messages.
+                </p>
+
+                <!-- Replace the placeholder below with your real email. -->
+                <a href="mailto:YOUR_EMAIL@example.com">
+                  YOUR_EMAIL@example.com
+                </a>
+              </div>
+            </article>
+
+            <article class="contact-option">
+              <div class="option-icon" aria-hidden="true">💬</div>
+
+              <div>
+                <h3>WhatsApp</h3>
+                <p>
+                  Prefer a direct conversation? Contact us through WhatsApp.
+                </p>
+
+                <!-- Replace 256700000000 with your WhatsApp number. -->
+                <a
+                  href="https://wa.me/256700000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Chat with Hightable ↗
+                </a>
+              </div>
+            </article>
+
+            <article class="contact-option">
+              <div class="option-icon" aria-hidden="true">📣</div>
+
+              <div>
+                <h3>Event and business promotion</h3>
+                <p>
+                  Ask about event listings, venue features, media coverage
+                  and potential promotional partnerships.
+                </p>
+
+                <a href="#contactForm">Make an enquiry ↓</a>
+              </div>
+            </article>
+
+            <div class="note">
+              <strong>A quick note:</strong> Sending an enquiry does not
+              guarantee publication, event coverage or a promotional
+              partnership. We'll review proposals individually.
+            </div>
+          </div>
+
+          <div class="form-card" id="contactForm">
+            <h2>Send us a message</h2>
+
+            <p>
+              Complete the details below. Your email app will open with
+              your message prepared for you to send.
+            </p>
+
+            <form id="enquiryForm">
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Your name *</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Enter your name"
+                    maxlength="100"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="email">Your email *</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                    maxlength="150"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="enquiryType">What is your enquiry about? *</label>
+
+                <select id="enquiryType" name="enquiryType" required>
+                  <option value="">Choose an enquiry type</option>
+                  <option value="Event listing or promotion">
+                    Event listing or promotion
+                  </option>
+                  <option value="Venue or restaurant listing">
+                    Venue or restaurant listing
+                  </option>
+                  <option value="Accommodation listing">
+                    Accommodation listing
+                  </option>
+                  <option value="Media coverage or interview">
+                    Media coverage or interview
+                  </option>
+                  <option value="Brand partnership or sponsorship">
+                    Brand partnership or sponsorship
+                  </option>
+                  <option value="Editorial or story idea">
+                    Editorial or story idea
+                  </option>
+                  <option value="General question">
+                    General question
+                  </option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="business">Business, event or organisation</label>
+
+                <input
+                  id="business"
+                  name="business"
+                  type="text"
+                  placeholder="Enter a name if applicable"
+                  maxlength="150"
+                >
+              </div>
+
+              <div class="field">
+                <label for="message">Your message *</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your event, business, idea or question..."
+                  maxlength="5000"
+                  required
+                ></textarea>
+              </div>
+
+              <p class="required-note">
+                * Required fields. Please do not include passwords,
+                payment details or other sensitive information.
+              </p>
+
+              <button class="submit-button" type="submit">
+                Prepare Email ↗
+              </button>
+
+              <div
+                class="form-status"
+                id="formStatus"
+                role="status"
+                aria-live="polite"
+              ></div>
+
+              <p class="form-disclaimer">
+                This form prepares a message in your email application.
+                It does not send or store your information on Hightable's
+                website.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="enquiry-types">
+          <article class="enquiry-card">
+            <div class="icon" aria-hidden="true">🎟️</div>
+            <h3>Event organisers</h3>
+            <p>
+              Share your event details, date, venue and official ticket
+              or information page for consideration.
+            </p>
+          </article>
+
+          <article class="enquiry-card">
+            <div class="icon" aria-hidden="true">🍽️</div>
+            <h3>Venues and stays</h3>
+            <p>
+              Tell us about your restaurant, lounge, hotel, guesthouse
+              or experience.
+            </p>
+          </article>
+
+          <article class="enquiry-card">
+            <div class="icon" ar
