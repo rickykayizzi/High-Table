@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>About Hightable | Discover Kampala and Beyond</title>
+
+  <meta
+    name="description"
+    content="Meet Hightable, a Kampala-first platform for discovering events, places, lifestyle stories and memorable experiences across Uganda."
+  >
+
+  <meta name="theme-color" content="#fff9ed">
+
+  <link rel="canonical" href="https://hightable.site/about/">
+
+  <style>
+    :root {
+      --yellow: #ffd84d;
+      --orange: #ff7947;
+      --pink: #ff83b5;
+      --purple: #7654d6;
+      --blue: #75d9f5;
+      --mint: #a9efcb;
+      --cream: #fff9ed;
+      --ink: #25212c;
+      --muted: #716b79;
+      --white: #ffffff;
+      --border: #eee7dc;
+      --radius: 24px;
+      --shadow: 0 12px 35px rgba(37, 33, 44, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      background: var(--yellow);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 249, 237, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1.3px;
+      white-space: nowrap;
+    }
+
+    .logo-mark {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--orange);
+      font-size: 19px;
+      transform: rotate(-5deg);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    .nav-cta {
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 9px 12px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--yellow);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .breadcrumb {
+      padding-top: 23px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero {
+      padding: 38px 0 60px;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 7vw, 75px);
+      border-radius: 32px;
+      background: var(--yellow);
+    }
+
+    .hero-panel::after {
+      content: "✦";
+      position: absolute;
+      right: 5%;
+      bottom: -95px;
+      color: var(--orange);
+      font-size: clamp(200px, 32vw, 390px);
+      line-height: 1;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      margin-bottom: 15px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 750px;
+      margin: 0;
+      font-size: clamp(42px, 8vw, 80px);
+      line-height: 1;
+      letter-spacing: -4px;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 620px;
+      margin: 22px 0 0;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 27px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 19px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .section {
+      padding: 45px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 27px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    .section-heading p {
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .story-panel {
+      padding: clamp(25px, 5vw, 45px);
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .story-panel h3 {
+      margin: 0 0 14px;
+      font-size: 25px;
+      letter-spacing: -0.8px;
+    }
+
+    .story-panel p {
+      margin: 0 0 15px;
+      color: #514b58;
+      font-size: 14px;
+    }
+
+    .story-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .color-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+      padding: clamp(25px, 5vw, 40px);
+      border-radius: var(--radius);
+      background: var(--purple);
+      color: var(--white);
+    }
+
+    .color-panel .big-star {
+      font-size: 58px;
+      line-height: 1;
+    }
+
+    .color-panel h3 {
+      max-width: 370px;
+      margin: 20px 0 10px;
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .color-panel p {
+      max-width: 400px;
+      margin: 0;
+      color: #eee8ff;
+      font-size: 14px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .value-card {
+      padding: 25px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .value-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: var(--yellow);
+      font-size: 27px;
+    }
+
+    .value-card:nth-child(2) .value-icon {
+      background: var(--pink);
+    }
+
+    .value-card:nth-child(3) .value-icon {
+      background: var(--blue);
+    }
+
+    .value-card h3 {
+      margin: 17px 0 7px;
+      font-size: 19px;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .discover-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .discover-card {
+      min-height: 215px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--mint);
+      transition: transform 0.2s ease;
+    }
+
+    .discover-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .discover-card:nth-child(2) {
+      background: var(--pink);
+    }
+
+    .discover-card:nth-child(3) {
+      background: var(--blue);
+    }
+
+    .discover-card:nth-child(4) {
+      background: var(--yellow);
+    }
+
+    .discover-card:nth-child(5) {
+      background: #e4d9ff;
+    }
+
+    .discover-card:nth-child(6) {
+      background: #ffd9c8;
+    }
+
+    .discover-icon {
+      font-size: 32px;
+    }
+
+    .discover-card h3 {
+      margin: 18px 0 5px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .discover-card p {
+      margin: 0;
+      font-size: 13px;
+      color: #514b58;
+    }
+
+    .discover-link {
+      display: inline-block;
+      margin-top: 17px;
+      font-size: 12px;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .community {
+      margin: 45px 0 70px;
+      padding: clamp(28px, 6vw, 55px);
+      border-radius: 30px;
+      background: var(--orange);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .community h2 {
+      max-width: 650px;
+      margin: 0;
+      font-size: clamp(29px, 5vw, 45px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .community p {
+      max-width: 570px;
+      margin: 14px 0 0;
+      font-size: 14px;
+    }
+
+    .community .button {
+      flex-shrink: 0;
+      background: var(--ink);
+    }
+
+    footer {
+      padding: 35px 0 25px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      padding-bottom: 28px;
+    }
+
+    .footer-brand {
+      max-width: 360px;
+    }
+
+    .footer-brand p {
+      color: #c7c0d0;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      gap: 15px 22px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      padding-top: 18px;
+      border-top: 1px solid #49434f;
+      color: #c7c0d0;
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 11px;
+        font-size: 12px;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .discover-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 18px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 8px;
+      }
+
+      .nav-cta {
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 25px;
+      }
+
+      .hero-panel {
+        border-radius: 24px;
+      }
+
+      .hero-panel::after {
+        right: -40px;
+        bottom: -35px;
+        font-size: 220px;
+        opacity: 0.3;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .values-grid,
+      .discover-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .discover-card {
+        min-height: 190px;
+      }
+
+      .community {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    KAMPALA FIRST. GOOD EXPERIENCES EVERYWHERE. ✨
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="../" aria-label="Hightable homepage">
+        <span class="logo-mark">H</span>
+        <span>hightable<span style="color:var(--orange)">.</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        Menu ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="../events/">Events</a>
+        <a href="../places/">Places</a>
+        <a href="../catch-ups/">Catch-ups</a>
+        <a href="../lifestyle/">Lifestyle</a>
+        <a href="../stay/">Places to Stay</a>
+        <a class="nav-cta" href="../contact/">Work With Us ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container breadcrumb">
+      <a href="../">Home</a> / About Hightable
+    </div>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-panel">
+          <span class="eyebrow">Meet Hightable</span>
+
+          <h1>Life is better<br>when you know<br>what's happening.</h1>
+
+          <p>
+            Hightable is being built to help people discover events,
+            places, stories and experiences worth knowing about —
+            starting in Kampala and growing beyond.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="../events/">Explore events ↗</a>
+            <a class="button button-light" href="../places/">Find places</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="story-grid">
+          <article class="story-panel">
+            <h2>What is Hightable?</h2>
+
+            <p>
+              Hightable is a Kampala-first discovery and lifestyle platform
+              designed to bring more of the city's experiences into one
+              convenient place.
+            </p>
+
+            <p>
+              Finding something to do should not mean searching through
+              endless posts, scattered event announcements and disconnected
+              recommendations. Hightable aims to make discovering your next
+              plan easier.
+            </p>
+
+            <p>
+              From brunches and concerts to new hangout spots, weekend
+              getaways and stories about the people shaping local culture,
+              the goal is to help people find experiences that fit their
+              interests.
+            </p>
+          </article>
+
+          <aside class="color-panel">
+            <div class="big-star" aria-hidden="true">✦</div>
+
+            <div>
+              <h3>More discovery. More connection. More living.</h3>
+
+              <p>
+                A growing home for local experiences, useful guides,
+                community stories and the places people want to talk about.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why we're building it</h2>
+
+          <p>
+            Kampala has events, creative people, interesting places and
+            experiences worth sharing. Hightable aims to make them easier
+            to discover.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">🔎</div>
+            <h3>Make discovery easier</h3>
+            <p>
+              Help people find things to do, places to visit and ideas for
+              spending their time without unnecessary searching.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">🎥</div>
+            <h3>Tell local stories</h3>
+            <p>
+              Use media, interviews, recaps and editorial features to
+              highlight experiences and the people behind them.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon" aria-hidden="true">🤝</div>
+            <h3>Connect communities</h3>
+            <p>
+              Create opportunities for audiences, event organisers,
+              hospitality businesses and creatives to find one another.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>One platform. Many ways to explore.</h2>
+
+          <p>
+            Hightable brings together discovery and media, so you can
+            explore what's happening, learn about a place or find
+            inspiration for your next outing.
+          </p>
+        </div>
+
+        <div class="discover-grid">
+          <a class="discover-card" href="../events/">
+            <div>
+              <div class="discover-icon" aria-hidden="true">🎟️</div>
+              <h3>Events</h3>
+              <p>Find events and experiences to add to your calendar.</p>
+            </div>
+            <span class="discover-link">Explore events ↗</span>
+          </a>
+
+          <a class="discover-card" href="../places/">
+            <div>
+              <div class="discover-icon" aria-hidden="true">📍</div>
+              <h3>Places</h3>
+              <p>Discover restaurants, cafés, lounges and hangout spots.</p>
+            </div>
+            <span class="discover-link">Explore places ↗</span>
+          </a>
+
+          <a class="discover-card" href="../catch-ups/">
+            <div>
+              <div class="discover-icon" aria-hidden="true">🎬</div>
+              <h3>Catch-ups</h3>
+              <p>Explore media stories, recaps and conversations.</p>
+            </div>
+            <span class="discover-link">Watch and explore ↗</span>
+          </a>
+
+          <a class="discover-card" href="../lifestyle/">
+            <div>
+              <div class="discover-icon" aria-hidden="true">✨</div>
+              <h3>Lifestyle</h3>
+              <p>Find ideas for dates, brunches, nights out and weekends.</p>
+            </div>
+            <span class="discover-link">Get inspired ↗</span>
+          </a>
+
+          <a class="discover-card" href="../stay/">
+            <div>
+              <div class="discover-icon" aria-hidden="true">🧳</div>
+              <h3>Places to Stay</h3>
+              <p>Explore accommodation ideas and potential getaways.</p>
+            </div>
+            <span class="discover-link">Find a stay ↗</span>
+          </a>
+
+          <a class="discover-card" href="../contact/">
+            <div>
+              <div class="discover-icon" aria-hidden="true">📣</div>
+              <h3>Work With Us</h3>
+              <p>Discuss event promotion, listings and media partnerships.</p>
+            </div>
+            <span class="discover-link">Get in touch ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="community">
+        <div>
+          <h2>Have something worth discovering?</h2>
+
+          <p>
+            Organising an event, running a venue, creating something
+            interesting or sharing a story? We'd like to hear from you
+            and explore how it could fit into Hightable.
+          </p>
+        </div>
+
+        <a class="button" href="../contact/">Let's talk ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="logo" href="../">
+            <span class="logo-mark">H</span>
+            <span>hightable<span style="color:var(--orange)">.</span></span>
+          </a>
+
+          <p>
+            Your guide to events, places, culture and good experiences
+            in Kampala and beyond.
+          </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="../events/">Events</a>
+          <a href="../places/">Places</a>
+          <a href="../catch-ups/">Catch-ups</a>
+          <a href="../lifestyle/">Lifestyle</a>
+          <a href="../stay/">Places to Stay</a>
+          <a href=".
