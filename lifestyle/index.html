@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hightable Lifestyle | Kampala Guides, Ideas & Experiences</title>
+
+  <meta name="description" content="Explore Kampala lifestyle with Hightable. Discover date ideas, brunch inspiration, nightlife guides, weekend plans, fashion, culture and experiences worth trying.">
+  <meta name="theme-color" content="#fff9ed">
+
+  <link rel="canonical" href="https://hightable.site/lifestyle/">
+
+  <meta property="og:title" content="Hightable Lifestyle | Kampala Guides & Ideas">
+  <meta property="og:description" content="Fresh inspiration for going out, exploring Kampala and making more of your free time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hightable.site/lifestyle/">
+
+  <style>
+    :root {
+      --ink: #211d2b;
+      --muted: #716c7b;
+      --paper: #fffdf8;
+      --yellow: #ffd84d;
+      --orange: #ff784f;
+      --pink: #ffb8d2;
+      --purple: #7254d8;
+      --blue: #a9dcff;
+      --mint: #bcebd6;
+      --line: #eee8df;
+      --white: #ffffff;
+      --radius: 24px;
+      --shadow: 0 12px 35px rgba(38, 28, 55, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    .top-note {
+      padding: 8px 14px;
+      background: var(--ink);
+      color: white;
+      text-align: center;
+      font-size: 0.82rem;
+    }
+
+    .top-note span {
+      color: var(--yellow);
+      font-weight: 900;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 253, 248, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 1.65rem;
+      font-weight: 950;
+      letter-spacing: -1.4px;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      border-radius: 13px;
+      transform: rotate(-5deg);
+      font-size: 1.35rem;
+    }
+
+    .logo-text span {
+      color: var(--orange);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--purple);
+    }
+
+    .nav-cta {
+      padding: 11px 17px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white !important;
+    }
+
+    .menu-button {
+      display: none;
+      padding: 10px 13px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--yellow);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 55px 0 35px;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 6vw, 72px);
+      border-radius: 34px;
+      background: var(--mint);
+    }
+
+    .hero-panel::after {
+      content: "✳";
+      position: absolute;
+      top: -45px;
+      right: 3%;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: clamp(150px, 27vw, 310px);
+      line-height: 1;
+      transform: rotate(15deg);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      font-size: 0.77rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 18px;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.96;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin-bottom: 25px;
+      color: #33463c;
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 0;
+      border-radius: 13px;
+      background: var(--ink);
+      color: white;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--purple);
+    }
+
+    .section {
+      padding: 35px 0 50px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 5px;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.1;
+      letter-spacing: -1.3px;
+    }
+
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 13px;
+    }
+
+    .category-card {
+      min-height: 125px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 17px;
+      border: 1px solid rgba(33, 29, 43, 0.05);
+      border-radius: 21px;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .category-card:hover,
+    .category-card.active {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      outline: 2px solid var(--ink);
+      outline-offset: -2px;
+    }
+
+    .category-card:nth-child(1) { background: #fff0b3; }
+    .category-card:nth-child(2) { background: #ffdce9; }
+    .category-card:nth-child(3) { background: #d8f5e6; }
+    .category-card:nth-child(4) { background: #e3dcff; }
+    .category-card:nth-child(5) { background: #d9efff; }
+    .category-card:nth-child(6) { background: #ffe0cf; }
+
+    .category-icon {
+      font-size: 1.8rem;
+    }
+
+    .category-name {
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 23px;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 8px;
+      width: min(100%, 500px);
+      padding: 7px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: white;
+    }
+
+    .search-box input {
+      width: 100%;
+      min-width: 0;
+      padding: 9px 11px;
+      border: 0;
+      outline: none;
+      background: transparent;
+    }
+
+    .search-box button {
+      padding: 10px 15px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .sort-select {
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      color: var(--ink);
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .article-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 6px 22px rgba(38, 28, 55, 0.035);
+    }
+
+    .article-visual {
+      min-height: 185px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-visual::before,
+    .article-visual::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border: 2px solid rgba(33, 29, 43, 0.09);
+      border-radius: 50%;
+    }
+
+    .article-visual::after {
+      width: 215px;
+      height: 215px;
+    }
+
+    .article-icon {
+      position: relative;
+      z-index: 1;
+      font-size: 4.4rem;
+    }
+
+    .visual-yellow { background: #fff0b3; }
+    .visual-pink { background: #ffdce9; }
+    .visual-mint { background: #d8f5e6; }
+    .visual-blue { background: #d9efff; }
+    .visual-purple { background: #e3dcff; }
+    .visual-orange { background: #ffe0cf; }
+
+    .article-body {
+      padding: 20px;
+    }
+
+    .article-tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #f0eaff;
+      color: #5a43b4;
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .article-body h3 {
+      margin-bottom: 9px;
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+
+    .article-body p {
+      margin-bottom: 15px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .article-link {
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .article-link:hover {
+      color: var(--purple);
+    }
+
+    .empty-state {
+      padding: 45px 24px;
+      border: 2px dashed #ded6e8;
+      border-radius: 25px;
+      background: #faf7ff;
+      text-align: center;
+    }
+
+    .empty-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 66px;
+      height: 66px;
+      margin-bottom: 13px;
+      border-radius: 22px;
+      background: var(--yellow);
+      font-size: 2rem;
+    }
+
+    .empty-state h3 {
+      margin-bottom: 8px;
+      font-size: 1.45rem;
+    }
+
+    .empty-state p {
+      max-width: 590px;
+      margin: 0 auto 20px;
+      color: var(--muted);
+    }
+
+    .inspiration {
+      padding: 10px 0 55px;
+    }
+
+    .inspiration-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      border-radius: 30px;
+      background: var(--pink);
+    }
+
+    .inspiration-copy {
+      align-self: center;
+      padding: clamp(28px, 5vw, 52px);
+    }
+
+    .inspiration-copy h2 {
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.05;
+      letter-spacing: -1.4px;
+    }
+
+    .inspiration-copy p {
+      color: #51404a;
+    }
+
+    .inspiration-art {
+      min-height: 310px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--yellow);
+    }
+
+    .inspiration-art::before,
+    .inspiration-art::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 2px solid rgba(33, 29, 43, 0.12);
+      border-radius: 50%;
+    }
+
+    .inspiration-art::after {
+      width: 270px;
+      height: 270px;
+    }
+
+    .inspiration-art span {
+      position: relative;
+      z-index: 1;
+      font-size: 7rem;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .quick-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: white;
+    }
+
+    .quick-card:nth-child(1) { background: #fff9e4; }
+    .quick-card:nth-child(2) { background: #f2efff; }
+    .quick-card:nth-child(3) { background: #e9f8f0; }
+
+    .quick-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+
+    .quick-card p {
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .quick-card a {
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .quick-card a:hover {
+      color: var(--purple);
+    }
+
+    .promote {
+      padding: 0 0 70px;
+    }
+
+    .promote-panel {
+      padding: clamp(28px, 5vw, 48px);
+      border-radius: 28px;
+      background: var(--purple);
+      color: white;
+      text-align: center;
+    }
+
+    .promote-panel h2 {
+      margin-bottom: 10px;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      letter-spacing: -1px;
+    }
+
+    .promote-panel p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: #f1edff;
+    }
+
+    .button-light {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 13px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    footer {
+      padding: 42px 0 20px;
+      background: var(--ink);
+      color: white;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      padding-bottom: 30px;
+    }
+
+    .footer-brand {
+      max-width: 330px;
+    }
+
+    .footer-brand p {
+      margin-top: 13px;
+      color: #c7c2d0;
+      font-size: 0.92rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      gap: 16px 23px;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      padding-top: 18px;
+      border-top: 1px solid #494453;
+      color: #c7c2d0;
+      font-size: 0.82rem;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 13px;
+        font-size: 0.84rem;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .article-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .menu-button {
+        display: inline-block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 8px;
+        padding: 12px 16px;
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-panel {
+        border-radius: 25px;
+      }
+
+      h1 {
+        letter-spacing: -1.8px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .category-card {
+        min-height: 105px;
+      }
+
+      .toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+
+      .article-grid,
+      .quick-links {
+        grid-template-columns: 1fr;
+      }
+
+      .inspiration-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .inspiration-art {
+        min-height: 220px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-note">
+    Your city. Your weekends. Your next story. <span>Live a little more.</span>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="../" aria-label="Hightable home">
+        <span class="logo-mark">✳</span>
+        <span class="logo-text">high<span>table</span></span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰ Menu
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="../events/">Events</a>
+        <a href="../places/">Places</a>
+        <a href="../catch-ups/">Catch-ups</a>
+        <a href="./" class="active">Lifestyle</a>
+        <a href="../stay/">Places to Stay</a>
+        <a class="nav-cta" href="../contact/">Work with us ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-panel">
+          <div class="hero-content">
+            <span class="eyebrow">The Hightable lifestyle edit</span>
+
+            <h1>More life.<br>More stories.</h1>
+
+            <p>
+              Need a date idea, weekend inspiration or a fresh way to
+              experience Kampala? Find practical guides, local discoveries
+              and ideas for making your free time count.
+            </p>
+
+            <a class="button" href="#articles">Explore lifestyle stories ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="categoriesTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 id="categoriesTitle">Find your next idea</h2>
+            <p>Choose a topic and explore what's interesting to you.</p>
+          </div>
+        </div>
+
+        <div class="category-grid" id="categoryGrid">
+          <button class="category-card active" data-category="all" type="button">
+            <span class="category-icon">✨</span>
+            <span class="category-name">Everything</span>
+          </button>
+
+          <button class="category-card" data-category="date-ideas" type="button">
+            <span class="category-icon">💗</span>
+            <span class="category-name">Date ideas</span>
+          </button>
+
+          <button class="category-card" data-category="food-brunch" type="button">
+            <span class="category-icon">🥐</span>
+            <span class="category-name">Food & brunch</span>
+          </button>
+
+          <button class="category-card" data-category="nightlife" type="button">
+            <span class="category-icon">🪩</span>
+            <span class="category-name">Nightlife</span>
+          </button>
+
+          <button class="category-card" data-category="weekends" type="button">
+            <span class="category-icon">🌴</span>
+            <span class="category-name">Weekend plans</span>
+          </button>
+
+          <button class="category-card" data-category="culture-style" type="button">
+            <span class="category-icon">🧢</span>
+            <span class="category-name">Culture & style</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="articles" aria-labelledby="articlesTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 id="articlesTitle">The lifestyle edit</h2>
+            <p>Ideas, guides and discoveries for everyday life.</p>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <form class="search-box" id="searchForm" role="search">
+            <input
+              type="search"
+              id="articleSearch"
+              placeholder="Search guides, ideas or topics..."
+              aria-label="Search lifestyle articles"
+            >
+            <button type="submit">Search</button>
+          </form>
+
+          <label>
+            <span class="hidden">Sort articles</span>
+            <select class="sort-select" id="sortSelect" aria-label="Sort articles">
+              <option value="newest">Newest first</option>
+              <option value="title">Title A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="article-grid hidden" id="articleGrid"></div>
+
+        <div class="empty-state" id="emptyState">
+          <div class="empty-icon">📝</div>
+          <h3>Fresh stories are on the way.</h3>
+          <p>
+            We're preparing useful lifestyle guides and local discoveries.
+            As articles are published, you'll find them here. We want every
+            guide to offer real value rather than fill the page with thin
+            or unverified content.
+          </p
