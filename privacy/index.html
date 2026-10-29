@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Privacy Policy | Hightable</title>
+
+  <meta
+    name="description"
+    content="Read Hightable's Privacy Policy to understand how personal information, contact enquiries and third-party services are handled."
+  >
+
+  <meta name="theme-color" content="#fff9ed">
+  <link rel="canonical" href="https://hightable.site/privacy/">
+
+  <style>
+    :root {
+      --yellow: #ffd84d;
+      --orange: #ff7947;
+      --pink: #ff83b5;
+      --purple: #7654d6;
+      --mint: #a9efcb;
+      --cream: #fff9ed;
+      --ink: #25212c;
+      --muted: #716b79;
+      --white: #ffffff;
+      --border: #eee7dc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(1050px, calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      background: var(--yellow);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 249, 237, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1.3px;
+      white-space: nowrap;
+    }
+
+    .logo-mark {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--orange);
+      font-size: 19px;
+      transform: rotate(-5deg);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    .nav-cta {
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 9px 12px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--yellow);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .breadcrumb {
+      padding-top: 23px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      text-underline-offset: 3px;
+    }
+
+    .hero {
+      padding: 35px 0;
+    }
+
+    .hero-panel {
+      padding: clamp(28px, 6vw, 60px);
+      border-radius: 30px;
+      background: var(--blue);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 13px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 7vw, 65px);
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 17px 0 0;
+      font-size: 15px;
+    }
+
+    .updated {
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 30px;
+      align-items: start;
+      padding: 20px 0 70px;
+    }
+
+    .contents {
+      position: sticky;
+      top: 100px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--white);
+    }
+
+    .contents h2 {
+      margin: 0 0 13px;
+      font-size: 16px;
+    }
+
+    .contents ol {
+      margin: 0;
+      padding-left: 19px;
+    }
+
+    .contents li {
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .contents a {
+      text-decoration: none;
+    }
+
+    .contents a:hover {
+      color: var(--purple);
+      text-decoration: underline;
+    }
+
+    .policy {
+      min-width: 0;
+      padding: clamp(22px, 5vw, 42px);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: var(--white);
+    }
+
+    .policy section {
+      padding: 0 0 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy section:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .policy h2 {
+      margin: 0 0 10px;
+      font-size: clamp(20px, 3vw, 25px);
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+    }
+
+    .policy p {
+      margin: 0 0 12px;
+      color: #514b58;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .policy ul {
+      padding-left: 22px;
+      color: #514b58;
+      font-size: 14px;
+    }
+
+    .policy li {
+      margin-bottom: 7px;
+    }
+
+    .policy a {
+      color: #6040c2;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      padding: 18px;
+      margin-bottom: 25px;
+      border-radius: 16px;
+      background: #fff4c7;
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 35px 0 25px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      padding-bottom: 28px;
+    }
+
+    .footer-brand {
+      max-width: 360px;
+    }
+
+    .footer-brand p {
+      color: #c7c0d0;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      gap: 15px 22px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      padding-top: 18px;
+      border-top: 1px solid #49434f;
+      color: #c7c0d0;
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 11px;
+        font-size: 12px;
+      }
+
+      .policy-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contents {
+        position: static;
+      }
+
+      .contents ol {
+        columns: 2;
+        column-gap: 30px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 18px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 8px;
+      }
+
+      .nav-cta {
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 25px;
+      }
+
+      .hero-panel {
+        border-radius: 23px;
+      }
+
+      .policy-layout {
+        padding-top: 5px;
+      }
+
+      .contents ol {
+        columns: 1;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    KAMPALA FIRST. GOOD EXPERIENCES EVERYWHERE. ✨
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="../" aria-label="Hightable homepage">
+        <span class="logo-mark">H</span>
+        <span>hightable<span style="color:var(--orange)">.</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        Menu ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="../events/">Events</a>
+        <a href="../places/">Places</a>
+        <a href="../catch-ups/">Catch-ups</a>
+        <a href="../lifestyle/">Lifestyle</a>
+        <a href="../stay/">Places to Stay</a>
+        <a class="nav-cta" href="../contact/">Contact Us ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container breadcrumb">
+      <a href="../">Home</a> / Privacy Policy
+    </div>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-panel">
+          <span class="eyebrow">Your privacy matters</span>
+
+          <h1>Privacy, made clear. 🔒</h1>
+
+          <p>
+            This policy explains how Hightable approaches personal
+            information when you visit our website, contact us or follow
+            links to other services.
+          </p>
+
+          <div class="updated">
+            Last updated: 29 October 2026
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container policy-layout">
+      <aside class="contents">
+        <h2>On this page</h2>
+
+        <ol>
+          <li><a href="#who-we-are">Who we are</a></li>
+          <li><a href="#information">Information we may receive</a></li>
+          <li><a href="#contact">Contact enquiries</a></li>
+          <li><a href="#cookies">Cookies and analytics</a></li>
+          <li><a href="#sharing">Sharing information</a></li>
+          <li><a href="#third-parties">Third-party links</a></li>
+          <li><a href="#retention">Data retention and security</a></li>
+          <li><a href="#rights">Your choices and rights</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#changes">Policy changes</a></li>
+          <li><a href="#contact-us">Contact us</a></li>
+        </ol>
+      </aside>
+
+      <article class="policy">
+        <div class="notice">
+          <strong>Please note:</strong> Hightable is a developing website.
+          Some features described in this policy may change as new services
+          are introduced. We aim to update this page when our information
+          practices change.
+        </div>
+
+        <section id="who-we-are">
+          <h2>1. Who we are</h2>
+
+          <p>
+            Hightable is a Kampala-first events, lifestyle, media and
+            discovery platform. Our aim is to help visitors discover
+            events, venues, experiences, stories and accommodation.
+          </p>
+
+          <p>
+            This policy applies to your use of
+            <a href="https://hightable.site/">hightable.site</a> and
+            information you voluntarily send to us through the contact
+            methods we provide.
+          </p>
+
+          <p>
+            Hightable is intended to serve visitors in Uganda and elsewhere.
+            We will identify the appropriate business or data controller
+            details here as the organisation's formal contact arrangements
+            are finalised.
+          </p>
+        </section>
+
+        <section id="information">
+          <h2>2. Information we may receive</h2>
+
+          <p>
+            The information involved depends on how you use the website.
+            We aim to collect only what is reasonably necessary for the
+            relevant purpose.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Information you provide:</strong> for example, your
+              name, email address, organisation, event details and message
+              when you contact us.
+            </li>
+
+            <li>
+              <strong>Technical information:</strong> the website hosting
+              provider or other infrastructure services may process
+              technical information such as IP addresses, browser details,
+              request times and server logs.
+            </li>
+
+            <li>
+              <strong>Information from external services:</strong> if we
+              introduce analytics, embedded media or other integrations,
+              those providers may process information as described in their
+              own privacy policies.
+            </li>
+          </ul>
+
+          <p>
+            Do not send passwords, payment card details, identification
+            documents or other sensitive information through general
+            contact channels unless we have specifically established a
+            secure and appropriate process.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>3. Contact enquiries</h2>
+
+          <p>
+            The contact page currently prepares an email using the visitor's
+            email application. The website itself does not send that email
+            or store the form contents in a Hightable database.
+          </p>
+
+          <p>
+            If you choose to send the prepared email, the information will
+            be processed by your email provider and the recipient's email
+            provider. Once received, Hightable may use your message to
+            respond to your enquiry, assess a listing, discuss coverage
+            or consider a business partnership.
+          </p>
+
+          <p>
+            If you contact us through WhatsApp or another external service,
+            that service's own terms and privacy practices also apply.
+          </p>
+
+          <p>
+            Please be aware that opening an email draft does not itself
+            transmit your information. You decide whether to send it.
+          </p>
+        </section>
+
+        <section id="cookies">
+          <h2>4. Cookies and analytics</h2>
+
+          <p>
+            The current website is primarily a static website. Its
+            interactive directory pages use browser-side code to display
+            and filter the information included in those pages.
+          </p>
+
+          <p>
+            We have not represented that Hightable currently uses advertising
+            cookies, behavioural tracking or an analytics platform. If we
+            add analytics, advertising technology or other tools that use
+            cookies or similar technologies, we will update this policy and
+            provide any notices or choices required by applicable law.
+          </p>
+
+          <p>
+            The hosting provider or services used to deliver the website
+            may process technical request data as part of their normal
+            operations.
+          </p>
+        </section>
+
+        <section id="sharing">
+          <h2>5. Sharing information</h2>
+
+          <p>
+            We do not intend to sell personal contact information to third
+            parties.
+          </p>
+
+          <p>
+            Information may be handled by service providers when necessary
+            to operate the website or respond to enquiries. If information
+            is shared with a service provider, we aim to limit that sharing
+            to what is appropriate for the relevant purpose.
+          </p>
+
+          <p>
+            We may also disclose information where required by law or where
+            reasonably necessary to protect our rights, users or services.
+          </p>
+
+          <p>
+            If Hightable introduces advertising, sponsored listings,
+            promotional partnerships or other commercial services, we will
+            distinguish commercial content appropriately and update this
+            policy if the way information is handled changes.
+          </p>
+        </section>
+
+        <section id="third-parties">
+          <h2>6. Third-party links and embedded content</h2>
+
+          <p>
+            Hightable may link to event ticketing pages, venue websites,
+            accommodation providers, social media platforms, video services
+            and other external websites.
+          </p>
+
+          <p>
+            These services are operated independently. We do not control
+            their privacy practices, security or content. Review their
+            policies before providing personal information or making a
+            purchase.
+          </p>
+
+          <p>
+            A link to a business or event does not, by itself, mean that
+            Hightable endorses or guarantees that provider.
+          </p>
+        </section>
+
+        <section id="retention">
+          <h2>7. Data retention and security</h2>
+
+          <p>
+            Information sent to Hightable by email or another contact
+            service may remain in those systems for as long as reasonably
+            necessary to handle the enquiry, maintain relevant business
+            records or meet legal obligations.
+          </p>
+
+          <p>
+            We aim to use reasonable safeguards appropriate to the
+            information and services involved. However, no website,
+            transmission method or electronic storage system can be
+            guaranteed to be completely secure.
+          </p>
+
+          <p>
+            Because the website's features may evolve, retention and
+            security arrangements may change when new services are added.
+          </p>
+        </section>
+
+        <section id="rights">
+          <h2>8. Your choices and privacy rights</h2>
+
+          <p>
+            Depending on the circumstances and applicable law, you may
+            have rights to request access to, correction of or deletion
+            of personal information, or to object to or restrict certain
+            processing.
+          </p>
+
+          <p>
+            You can choose whether to send an enquiry through the contact
+            page. You can also choose not to provide optional information.
+            Some information may be needed if you want us to respond to
+            your request.
+          </p>
+
+          <p>
+            To make a privacy request, use the contact page and clearly
+            explain your request. We may need to verify your identity
+            before responding. Legal requirements and legitimate record
+            keeping may affect what we can delete or disclose.
+          </p>
+
+          <p>
+            We will handle requests in accordance with applicable
+            requirements, including relevant Ugandan data protection law
+            where it applies.
+          </p>
+        </section>
+
+        <section id="children">
+          <h2>9. Children's privacy</h2>
+
+          <p>
+            Hightable is a general audience discovery and lifestyle
+            platform and is not designed specifically to collect personal
+            information from children.
+          </p>
+
+          <p>
+            If you believe a child has provided personal information to
+            Hightable inappropriately, please contact us so we can assess
+            the matter and take appropriate steps where required.
+          </p>
+        </section>
+
+        <section id="changes">
+          <h2>10. Changes to this policy</h2>
+
+          <p>
+            We may revise this policy when the website, its services or
+            applicable legal requirements change.
+          </p>
+
+          <p>
+            The latest version will be published on this page. The
+            “Last updated” date at the top should be changed whenever
+            we make a substantive revision.
+          </p>
+        </section>
+
+        <section id="contact-us">
+          <h2>11. Contact us about privacy</h2>
+
+          <p>
+            If you have a question about this policy or wish to make a
+            privacy request, please contact Hightable through our
+            <a href="../contact/">Contact page</a>.
+          </p>
+
+          <p>
+            If you contact us by email or through a third-party service,
+            that service will also process the information n
